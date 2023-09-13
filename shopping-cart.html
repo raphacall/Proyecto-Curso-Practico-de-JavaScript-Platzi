@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        :root {
+            --white: #fff;
+            --black: #000;
+            --very-light-pink: #c7c7c7;
+            --text-input-field: #F7F7F7;
+            --hospital-green: #ACD9B2;
+            --lss:12pt;
+            --ls: 14px;
+            --lm: 16px;
+            --ll: 18px;
+        }
+        body {
+            font-family: 'Quicksand', sans-serif;
+            margin: 0;
+        }
+        .shopping-container {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 360px;
+            height: 100vh;
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+            box-shadow: 0px 1.5px 1.5px rgba(0, 0, 0, 0.25);
+        }
+        .title {
+            font-size: var(--ll);
+            text-align: left;
+        }
+        .title-arrow {
+            display: flex;
+            width: 320px;
+            flex-direction: row;
+            margin-bottom: 48px;
+            justify-content: left;
+            align-items: center;
+        }
+        .title-arrow figure img {
+            rotate: 180deg;
+            margin-right: 20px;
+
+        }
+        .orders-items-container {
+            width: 320px;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .order-item,.order-detail, .shopping-detail {
+            width: 320px;
+            height: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+            border-radius: 12px;
+            box-sizing: border-box;
+        }
+        .shopping-detail {
+            background-color: var(--text-input-field);
+            padding: 24px 24px;
+        }
+        .order-info {
+            display: flex;
+            flex-direction: column;
+            height: auto;
+        }
+        .order-info p {
+            margin: 0;
+            font-size: var(--lm);
+        }
+        .order-info p:first-child, .order-price span, .product-price span {
+            font-weight: bold;
+        }
+        .order-info p:nth-child(2){
+            font-size: var(--ls);
+            color: var(--very-light-pink);
+        }
+        .product-info {
+            display: flex;
+            align-items: center;
+        }
+        .product-info p {
+            margin: 0;
+            margin-left: 12px;
+            font-size: var(--ls);
+            color: var(--very-light-pink);
+        }
+        .product-info figure img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+        .product-price {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .close-icon figure img {
+            margin: 0;
+            margin-left: 20px;
+        }
+        figure{
+            display: flex;
+            margin: 0;
+        }
+        button.button-primary {
+            margin-bottom: 24px;
+            height: 60px;
+            border: none;
+            border-radius: 12px;
+            background-color: var(--hospital-green);
+            color: var(--white);
+            font-size: var(--ll);
+            font-weight: bold;
+            cursor: pointer;
+            box-sizing: content-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 320px;
+        }
+        @media (max-width:620px){
+            .shopping-container {
+                position: relative;
+                width: 100%;
+                height: auto;
+                box-shadow: none;
+            }
+        } 
+
+    </style>
+</head>
+<body>
+    <aside class="shopping-container">
+        <div class="title-arrow">
+            <figure>
+                <img src="./icons/flechita.svg" alt="">
+            </figure>
+            <h1 class="title">Shopping Cart</h1>
+        </div>
+            <div class="order-item">
+                <div class="product-info">
+                    <figure>
+                        <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Bike" class="product-img">
+                    </figure>
+                    <p>Bike</p>
+                </div>
+                <div class="product-price">
+                    <span>$ 120,00</span>
+                    <div class="close-icon">
+                        <figure>
+                            <img src="./icons/icon_close.png" alt="close icon">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <div class="order-item">
+                <div class="product-info">
+                    <figure>
+                        <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Bike" class="product-img">
+                    </figure>
+                    <p>Bike</p>
+                </div>
+                <div class="product-price">
+                    <span>$ 120,00</span>
+                    <div class="close-icon">
+                        <figure>
+                            <img src="./icons/icon_close.png" alt="close icon">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <div class="order-item">
+                <div class="product-info">
+                    <figure>
+                        <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Bike" class="product-img">
+                    </figure>
+                    <p>Bike</p>
+                </div>
+                <div class="product-price">
+                    <span>$ 120,00</span>
+                    <div class="close-icon">
+                        <figure>
+                            <img src="./icons/icon_close.png" alt="close icon">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <div class="order-item">
+                <div class="product-info">
+                    <figure>
+                        <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Bike" class="product-img">
+                    </figure>
+                    <p>Bike</p>
+                </div>
+                <div class="product-price">
+                    <span>$ 120,00</span>
+                    <div class="close-icon">
+                        <figure>
+                            <img src="./icons/icon_close.png" alt="close icon">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <div class="order-item">
+                <div class="product-info">
+                    <figure>
+                        <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Bike" class="product-img">
+                    </figure>
+                    <p>Bike</p>
+                </div>
+                <div class="product-price">
+                    <span>$ 120,00</span>
+                    <div class="close-icon">
+                        <figure>
+                            <img src="./icons/icon_close.png" alt="close icon">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <div class ="shopping-detail">
+                <div class="order-info">
+                    <p>Total</p>
+                </div>
+                <div class="order-price">
+                    <span>$ 720,00</span>
+                </div>
+            </div>
+            <button class="button-primary">Checkout</button>
+
+        </div>
+    </aside>
+</body>
+</html>

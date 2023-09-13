@@ -1,0 +1,185 @@
+:root {
+    --white: #fff;
+    --black: #000;
+    --very-light-pink: #c7c7c7;
+    --text-input-field: #F7F7F7;
+    --hospital-green: #ACD9B2;
+    --lss:12pt;
+    --ls: 14px;
+    --lm: 16px;
+    --ll: 18px;
+}
+body {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 48px;
+    height: 50px;
+    background-color: var(--white);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+}
+img.logo {
+    width: 150px;
+}
+.menu-icon{
+    display: none;
+}
+.navbar-left {
+    display: flex;
+    flex-direction: row;
+    
+}
+.navbar-left ul {
+    list-style: none;
+    display: flex;
+    margin-right: 24px;
+    align-items: center;
+
+}
+li.item-navbar {
+    border: 2px solid var(--white);
+}
+.navbar-left ul li a {
+    text-decoration: none;
+    color: var(--very-light-pink);
+    font-size: var(--lm);
+    
+}
+.navbar-right ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+
+}
+.navbar-right ul li a {
+    text-decoration: none;
+    color: var(--black);
+    font-size: var(--lm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+li.item-navbar {
+    margin-right: 24px;
+    padding: 4px 8px;
+    border-radius: 8px;
+}
+.navbar-left li.item-navbar:hover {
+    border: 2px solid var(--black);
+    border-color: var(--hospital-green);
+}
+.navbar-left li.item-navbar:hover a {
+    color: var(--hospital-green);
+}
+.navbar-right img.email-address-icon {
+    rotate: 90deg;
+    padding: 10px;
+}
+li.email-address {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--black);
+    font-size: var(--lm);
+    cursor: pointer;
+}
+.cart-icon {
+    margin-left: 36px;
+    position: relative;
+}
+.cart-icon-o > div {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: var(--hospital-green);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8pt;
+    font-weight: bold;
+    top: -6px;
+    right: -3px;
+}
+
+.item-navbar.cart-icon {
+    margin: 0;
+    padding: 0;
+}
+
+.menu-box {
+    position: absolute;
+    width: 100px;
+    height: auto;
+    border: 1px solid var(--very-light-pink);
+    border-radius: 6px;
+    padding: 24px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    top: 50px;
+    right: 100px;
+}
+.menu-box ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.menu-box ul li {
+    text-align: right;
+    margin-bottom: 24px;
+
+}
+.menu-box ul li a{
+    font-size: var(--lm);
+    color: var(--black);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu-box ul li:last-child {
+    padding-top: 24px;
+    margin-top: 36px;
+    margin-bottom: 0;
+    border-top: 1px solid var(--very-light-pink);
+}
+
+.menu-box ul li:last-child a {
+    color: var(--hospital-green);
+    font-size: var(--ls);
+
+}
+.inactive {
+    display: none;
+}
+
+@media (max-width: 620px) {
+    nav{
+        padding: 0 12px;
+    }
+    .menu-icon{
+        display: block;
+    }
+    img.logo {
+        display: block;  
+    }
+    .navbar-left {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    ul.ul-left {
+        display: none;
+    }
+    li.email-address,.email-address-icon {
+        display: none;
+    }
+    .navbar-right ul, .cart-icon {
+        margin: 0;
+        padding: 0;
+    }
+}

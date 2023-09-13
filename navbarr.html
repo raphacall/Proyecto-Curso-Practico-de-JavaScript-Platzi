@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        :root {
+            --white: #fff;
+            --black: #000;
+            --very-light-pink: #c7c7c7;
+            --text-input-field: #F7F7F7;
+            --hospital-green: #ACD9B2;
+            --lss:12pt;
+            --ls: 14px;
+            --lm: 16px;
+            --ll: 18px;
+        }
+        body {
+            font-family: 'Quicksand', sans-serif;
+            margin: 0;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 48px;
+            height: 50px;
+            background-color: var(--white);
+            box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+        }
+        img.logo {
+            width: 150px;
+        }
+        .menu-icon{
+            display: none;
+        }
+        .navbar-left {
+            display: flex;
+            flex-direction: row;
+            
+        }
+        .navbar-left ul {
+            list-style: none;
+            display: flex;
+            margin-right: 24px;
+            align-items: center;
+
+        }
+        li.item-navbar {
+            border: 2px solid var(--white);
+        }
+        .navbar-left ul li a {
+            text-decoration: none;
+            color: var(--very-light-pink);
+            font-size: var(--lm);
+            
+        }
+        .navbar-right ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+
+        }
+        .navbar-right ul li a {
+            text-decoration: none;
+            color: var(--black);
+            font-size: var(--lm);
+        }
+
+        li.item-navbar {
+            margin-right: 24px;
+            padding: 4px 8px;
+            border-radius: 8px;
+        }
+        .navbar-left li.item-navbar:hover {
+            border: 2px solid var(--black);
+            border-color: var(--hospital-green);
+        }
+        .navbar-left li.item-navbar:hover a {
+            color: var(--hospital-green);
+        }
+        .navbar-right a img.email-address-icon {
+            rotate: 90deg;
+        }
+        li.email-address {
+            margin: 0;
+        }
+        .cart-icon {
+            margin-left: 36px;
+            position: relative;
+        }
+        .cart-icon-o > div {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background-color: var(--hospital-green);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 8pt;
+            font-weight: bold;
+            top: -6px;
+            right: -3px;
+        }
+
+        .item-navbar.cart-icon {
+            margin: 0;
+            padding: 0;
+        }
+
+        @media (max-width: 620px) {
+            nav{
+                padding: 0 12px;
+            }
+            .menu-icon{
+                display: block;
+            }
+            img.logo {
+                display: block;  
+            }
+            .navbar-left {
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+            }
+            ul.ul-left {
+                display: none;
+            }
+            li.email-address,.email-address-icon {
+                display: none;
+            }
+            .navbar-right ul, .cart-icon {
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <img src="./icons/icon_menu.svg" alt="menu" class="menu-icon" href="/home_page.html">
+
+        <div class="navbar-left">
+            <img src="./logos/logo_yard_sale.svg" alt="logo yard sale" class="logo">
+            <ul class="ul-left">
+                <li class="item-navbar"><a href="/">All</a></li>
+                <li class="item-navbar"><a href="/">Clothes</a></li>
+                <li class="item-navbar"><a href="/">Electronics</a></li>
+                <li class="item-navbar"><a href="/">Furniture</a></li>
+                <li class="item-navbar"><a href="/">Toys</a></li>
+                <li class="item-navbar"><a href="/">Others</a></li>
+            </ul>
+        </div>
+        <div class="navbar-right">
+            <ul>
+                <li class="item-navbar email-address" ><a href="/">correo@yardsale.com</a></li>
+                <a><img src="./icons/flechita.svg" alt="" class="email-address-icon"></a>
+                <li class="item-navbar cart-icon">
+                    <a href="/"><div class="cart-icon-o"><img src="./icons/icon_shopping_cart.svg" alt="/" class="cart-icon"><div>2</div></div></a>
+                </li>
+            </ul>
+        </div>
+
+
+    </nav>
+</body>
+</html>

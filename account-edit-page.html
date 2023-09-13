@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        :root {
+            --white: #fff;
+            --black: #000;
+            --very-light-pink: #c7c7c7;
+            --text-input-field: #F7F7F7;
+            --hospital-green: #ACD9B2;
+            --lss:12pt;
+            --ls: 14pt;
+            --lm: 16pt;
+            --ll: 18pt;
+        }
+        body {
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+        }
+        .login {
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+        .form-container {
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            width: 336px;
+        }
+        .logo.logo-login {
+            display: none;
+            width: 150px;
+            margin-bottom: 36px;
+            justify-self: center;
+        }
+        .title {
+            font-size: var(--ll);
+            margin-bottom: 48px;
+            text-align: left;
+        }
+        .subtitle {
+            font-size: var(--ls);
+            color: var(--very-light-pink);
+            text-align: center;
+            font-weight: 300;
+            margin-top: 0;
+            margin-bottom: 36px;
+        }
+        .form {
+            display: flex;
+            flex-direction: column;
+        }
+        .input-group{
+            display: flex;
+            flex-direction: column;
+        }
+        .label {
+            font-size: var(--ls);
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+        p.value {
+            margin: 0;
+            font-size: var(--ls);
+            font-weight: 300;
+            margin-bottom: 36px;
+        }
+        .button-login {
+            margin-top: 12px;
+            margin-bottom: 24px
+        }
+        .subtitle.forgot-password {
+            font-weight: bold;
+            font-size: var(--lss);
+        }
+        p > a{
+            text-decoration: none;
+            color:var(--hospital-green) ;
+        }
+        .button-secondary {
+            width: 100%;
+            height: 60px;
+            border-color: var(--hospital-green);
+            border-style: solid;
+            border-radius: 8px;
+            background-color: var(--text-input-field);
+            color: var(--hospital-green) ;
+            font-size: var(--ls);
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .button-edit {
+            margin-top: 24px;
+            margin-bottom: 24px
+        }
+        @media (max-width: 640px){
+            .form-container{
+                height: 100%;
+            }
+            .form {
+                justify-content: space-between;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login">
+        <div class="form-container">
+            <h1 class="title">My account</h1>
+            <form action="/" class="form">
+                <div class="input-group">
+                    <label for="name" class="label">Name</label>
+                    <p class="value">Name Lastname</p>
+                    
+                    <label for="email-address" class="label">Email address</label>
+                    <p class="value">correo@yardsale.com</p>
+                    
+                    <label for="password" class="label">Password</label>
+                    <p class="value">********</p>
+                </div> 
+                <input type="submit" value="Edit" class="button-secondary button-edit">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

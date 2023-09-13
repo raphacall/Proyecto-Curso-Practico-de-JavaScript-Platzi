@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        :root {
+            --white: #fff;
+            --black: #000;
+            --very-light-pink: #c7c7c7;
+            --text-input-field: #F7F7F7;
+            --hospital-green: #ACD9B2;
+            --lss:12pt;
+            --ls: 14px;
+            --lm: 16px;
+            --ll: 18px;
+        }
+        body {
+            font-family: 'Quicksand', sans-serif;
+        }
+        .menu-box {
+            width: 100px;
+            height: auto;
+            border: 1px solid var(--very-light-pink);
+            border-radius: 6px;
+            padding: 24px;
+            box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+        }
+        .menu-box ul{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .menu-box ul li {
+            text-align: right;
+            margin-bottom: 24px;
+
+        }
+        .menu-box ul li a{
+            font-size: var(--lm);
+            color: var(--black);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .menu-box ul li:last-child {
+            padding-top: 24px;
+            margin-top: 36px;
+            margin-bottom: 0;
+            border-top: 1px solid var(--very-light-pink);
+        }
+
+        .menu-box ul li:last-child a {
+            color: var(--hospital-green);
+            font-size: var(--ls);
+
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-box">
+        <ul>
+            <li>
+                <a href="/">My orders</a>
+            </li>
+            <li>
+                <a href="/">My account</a>
+            </li>
+            <li>
+                <a href="/">Sign up</a>
+            </li>
+        </ul>
+    </div>
+
+</body>
+</html>

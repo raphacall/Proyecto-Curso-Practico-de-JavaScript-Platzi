@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        :root {
+            --white: #fff;
+            --black: #000;
+            --very-light-pink: #c7c7c7;
+            --text-input-field: #F7F7F7;
+            --hospital-green: #ACD9B2;
+            --lss:12pt;
+            --ls: 14px;
+            --lm: 16px;
+            --ll: 18px;
+        }
+        body {
+            font-family: 'Quicksand', sans-serif;
+            margin: 0;
+        }
+        .orders-container {
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+        .title {
+            font-size: var(--ll);
+            margin-bottom: 48px;
+            text-align: left;
+            padding-left: 12px;
+        }
+        .orders-items-container {
+            width: 320px;
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+        }
+
+        .order-detail {
+            width: 320px;
+            height: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 12px;
+            box-sizing: border-box;
+            padding: 12px;
+            margin-bottom: 24px;
+            box-sizing: border-box;
+        }
+        .order-detail:hover {
+            background-color: #F7F7F7;
+        }
+        .order-info {
+            display: flex;
+            flex-direction: column;
+            height: auto;
+        }
+        .order-info p {
+            margin: 0;
+            font-size: var(--lm);
+        }
+        .order-info p:first-child, .order-price span, .product-price span {
+            font-weight: bold;
+        }
+        .order-info p:nth-child(2){
+            font-size: var(--ls);
+            color: var(--very-light-pink);
+        }
+        .order-price {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        figure.arrow {
+            margin: 5px 0 5px 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .arrow img{
+            width: 7px;
+            margin: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="orders-container">
+        <div class="orders-items-container">
+            <h1 class="title">My order</h1>
+            <div class ="order-detail">
+                <div class="order-info">
+                    <p>04.25.2021</p>
+                    <p>6 articles</p>
+                </div>
+                <div class="order-price">
+                    <span>$ 720,00</span>
+                    <figure class="arrow">
+                        <img src="icons/flechita.svg" alt="flechita">
+                    </figure>
+                </div>
+            </div>
+            <div class ="order-detail" src="/">
+                <div class="order-info">
+                    <p>04.25.2021</p>
+                    <p>6 articles</p>
+                </div>
+                <div class="order-price">
+                    <span>$ 720,00</span>
+                    <figure class="arrow">
+                        <img src="icons/flechita.svg" alt="flechita">
+                    </figure>
+                </div>
+            </div>
+            <div class ="order-detail">
+                <div class="order-info">
+                    <p>04.25.2021</p>
+                    <p>6 articles</p>
+                </div>
+                <div class="order-price">
+                    <span>$ 720,00</span>
+                    <figure class="arrow">
+                        <img src="icons/flechita.svg" alt="flechita">
+                    </figure>
+                </div>
+            </div>
+            <div class ="order-detail">
+                <div class="order-info">
+                    <p>04.25.2021</p>
+                    <p>6 articles</p>
+                </div>
+                <div class="order-price">
+                    <span>$ 720,00</span>
+                    <figure class="arrow">
+                        <img src="icons/flechita.svg" alt="flechita">
+                    </figure>
+                </div>
+            </div>
+            <div class ="order-detail">
+                <div class="order-info">
+                    <p>04.25.2021</p>
+                    <p>6 articles</p>
+                </div>
+                <div class="order-price">
+                    <span>$ 720,00</span>
+                    <figure class="arrow">
+                        <img src="icons/flechita.svg" alt="flechita">
+                    </figure>
+                </div>
+            </div>
+            <div class ="order-detail">
+                <div class="order-info">
+                    <p>04.25.2021</p>
+                    <p>6 articles</p>
+                </div>
+                <div class="order-price">
+                    <span>$ 720,00</span>
+                    <figure class="arrow">
+                        <img src="icons/flechita.svg" alt="flechita">
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

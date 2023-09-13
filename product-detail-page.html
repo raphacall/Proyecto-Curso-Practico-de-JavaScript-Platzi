@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        :root {
+            --white: #fff;
+            --black: #000;
+            --very-light-pink: #c7c7c7;
+            --text-input-field: #F7F7F7;
+            --hospital-green: #ACD9B2;
+            --lss:12pt;
+            --ls: 14px;
+            --lm: 16px;
+            --ll: 18px;
+        }
+        body {
+            font-family: 'Quicksand', sans-serif;
+            margin: 0;
+        }
+
+        .product-detail {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 320px;
+            height: 100vh;
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+            box-shadow: 0px 1.5px 1.5px rgba(0, 0, 0, 0.25);
+        }
+
+        .photo-frame {
+            position: relative;
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .close-icon-frame {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-color: var(--white);
+            border-radius: 50%;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+        }
+        img.product-img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            border-radius: 0 0 20px 20px;
+        }
+        img.close-icon {
+            width: 12px;
+            height: 12px;
+            position: absolute;
+        }
+        .circle-option-frame {
+            width: 50px;
+            height: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+            margin-top: 10px;
+            box-sizing: border-box;
+        }
+        .circle-option {
+            width: 10px;
+            height: 10px;
+            background-color: var(--text-input-field);
+            border-radius: 50%;
+            box-sizing: border-box;
+        }
+        .circle-option:nth-child(1) {
+            background-color:var(--very-light-pink);
+        }
+        .info-product {
+            width: 100%;
+            height: auto;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+        .info-product h1 {
+            font-size: var(--ll);
+            font-weight: bold;
+            color: var(--black);
+            margin: 0;
+        }
+        .info-product p {
+            font-size: var(--ls);
+            color: var(--black);
+            margin: 0;
+        }
+        .info-product p:nth-child(2) {
+            margin-top: 5px;
+            font-size: var(--lm);
+            color: var(--black);
+            font-weight: 300;
+        }
+        .info-product p:nth-child(3) {
+            margin-top: 20px;
+            font-size: var(--ls);
+            height: 180px;
+            overflow-y: hidden;
+            font-weight: 300;
+        }
+
+        button.button-primary {
+            position: absolute;
+            margin-top: 20px;
+            height: 60px;
+            border: none;
+            border-radius: 8px;
+            background-color: var(--hospital-green);
+            color: var(--white);
+            font-size: var(--lm);
+            font-weight: bold;
+            cursor: pointer;
+            box-sizing: border-box;
+            bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: calc(100% - 40px);
+        }
+        button.button-primary img {
+            width: 35px;
+            height: 35px;
+            margin-right: 10px;
+        }
+        @media (max-width:620px){
+            .product-detail {
+                position: relative;
+                width: 100%;
+            }
+            button.button-primary {
+                width: calc(100% - 40px);
+                height: 60px;
+            }
+        }
+
+
+    </style>
+</head>
+    <body>
+        <aside class="product-detail">
+            <div class="photo-frame">
+                <div class="close-icon-frame" ><img class="close-icon" src="./icons/icon_close.png" alt="close"></div>
+                <img class="product-img" src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="bike">
+                <div class="circle-option-frame">
+                    <div class="circle-option"></div>
+                    <div class="circle-option"></div>
+                    <div class="circle-option"></div>
+                </div>
+            </div>
+            <div class="info-product scrollbar">
+                <h1>$ 120,00</h1>
+                <p>Retro refrigerator</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <button class="button-primary"><img src="./icons/bt_add_to_cart.svg" alt="">Add to cart</button>
+        </aside>
+    </body>
+</html>
