@@ -1,3 +1,4 @@
+/*General*/
 :root {
     --white: #fff;
     --black: #000;
@@ -13,6 +14,9 @@ body {
     font-family: 'Quicksand', sans-serif;
     margin: 0;
 }
+.inactive {
+    display: none;
+}
 nav {
     display: flex;
     justify-content: space-between;
@@ -21,6 +25,7 @@ nav {
     height: 50px;
     background-color: var(--white);
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+
 }
 img.logo {
     width: 150px;
@@ -153,8 +158,79 @@ li.email-address {
     font-size: var(--ls);
 
 }
-.inactive {
-    display: none;
+/*Menu-mobile*/
+
+.menu-box-mobile{
+    position: absolute;
+    top: 50px;
+    height: calc(100vh - 50px);
+    box-sizing: border-box;
+    padding: 24px;
+}
+.x-close-icon {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    margin: 0;
+}
+.x-close-icon img {
+    width: 18px;
+    height: auto;
+}
+.categories-menu, .account-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.categories-menu li, .account-menu li {
+    text-align: left;
+    margin-bottom: 24px;
+
+}
+.categories-menu li a, .account-menu li a {
+    font-size: var(--lm);
+    color: var(--black);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu-box-mobile h1.title {
+    font-size: var(--ll);
+    margin: 0;
+    margin-bottom: 36px;
+    text-align: left;
+
+}
+
+.account-menu {
+    width: 300px;
+    padding-top: 24px;
+    margin-top: 24px;
+    margin-bottom: 0;
+    border-top: 1px solid var(--very-light-pink);
+}
+.email-address-mobile {
+    font-size: var(--ls);
+    color: var(--black);
+}
+.sign-up {
+    position: absolute;
+    bottom: 24px;
+}
+
+li.sign-up a {
+    color: var(--hospital-green);
+    font-size: var(--ls);
+    cursor: pointer;
+
+}
+
+@media (min-width: 621px) {
+    .menu-box-mobile{
+        display: none;
+    }
+
+
 }
 
 @media (max-width: 620px) {
@@ -182,4 +258,5 @@ li.email-address {
         margin: 0;
         padding: 0;
     }
+
 }
