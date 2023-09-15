@@ -14,8 +14,9 @@ body {
     font-family: 'Quicksand', sans-serif;
     margin: 0;
 }
-.inactive {
-    display: none;
+body::-webkit-scrollbar {
+    width: 12px;
+    background-color: var(--hospital-green);
 }
 nav {
     display: flex;
@@ -97,6 +98,7 @@ li.email-address {
 .cart-icon {
     margin-left: 36px;
     position: relative;
+    cursor: pointer;
 }
 .cart-icon-o > div {
     position: absolute;
@@ -224,8 +226,133 @@ li.sign-up a {
     cursor: pointer;
 
 }
+/*Shopping Container*/
+.shopping-container {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 360px;
+    height: calc(100vh - 50px);
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 1.5px 1.5px rgba(0, 0, 0, 0.25);
+}
+.title-arrow .title {
+    font-size: var(--ll);
+    text-align: left;
+}
+.title-arrow {
+    display: flex;
+    width: 320px;
+    flex-direction: row;
+    margin-bottom: 36px;
+    justify-content: left;
+    align-items: center;
+}
+.title-arrow figure img {
+    rotate: 180deg;
+    margin-right: 20px;
+    padding: 2px;
+    cursor: pointer;
 
-@media (min-width: 621px) {
+}
+.orders-container {
+    display: flex;
+    flex-direction: column;
+    overflow:auto;
+    width: 360px;
+    align-items: center;
+    padding-top: 12px;
+    margin-bottom: 5px;
+}
+.orders-container::-webkit-scrollbar {
+    width: 6px;
+    background-color: var(--hospital-green);
+}
+
+.order-item,.order-detail, .shopping-detail {
+    width: 320px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+.shopping-detail {
+    background-color: var(--text-input-field);
+    padding: 24px 24px;
+}
+.order-info {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+.order-info p {
+    margin: 0;
+    font-size: var(--lm);
+}
+.order-info p:first-child, .order-price span, .product-price span {
+    font-weight: bold;
+}
+.order-info p:nth-child(2){
+    font-size: var(--ls);
+    color: var(--very-light-pink);
+}
+.product-info {
+    display: flex;
+    align-items: center;
+}
+.product-info p {
+    margin: 0;
+    margin-left: 12px;
+    font-size: var(--ls);
+    color: var(--very-light-pink);
+}
+.product-info figure img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+.product-price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.close-icon figure img {
+    margin: 0;
+    margin-left: 20px;
+}
+figure{
+    display: flex;
+    margin: 0;
+}
+button.button-primary {
+    margin-bottom: 24px;
+    height: 60px;
+    border: none;
+    border-radius: 12px;
+    background-color: var(--hospital-green);
+    color: var(--white);
+    font-size: var(--ll);
+    font-weight: bold;
+    cursor: pointer;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 320px;
+}
+
+.inactive {
+    display: none;
+}
+
+@media (min-width: 641px) {
     .menu-box-mobile{
         display: none;
     }
@@ -233,9 +360,16 @@ li.sign-up a {
 
 }
 
-@media (max-width: 620px) {
+@media (max-width: 640px) {
+    body::-webkit-scrollbar {
+        width: 6px;
+        background-color: var(--hospital-green);
+    }
     nav{
         padding: 0 12px;
+    }
+    .menu-box{
+        display: none;
     }
     .menu-icon{
         display: block;
@@ -257,6 +391,11 @@ li.sign-up a {
     .navbar-right ul, .cart-icon {
         margin: 0;
         padding: 0;
+    }
+    .shopping-container {
+        width: 100%;
+        height: auto;
+        box-shadow: none;
     }
 
 }
